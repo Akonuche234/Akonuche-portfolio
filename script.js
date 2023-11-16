@@ -47,6 +47,7 @@ window.addEventListener("scroll", function(){
                 nav.style.display = null;
                 navbar.style.position = "fixed";
                 nav.style.background = "#000";
+                nav.style.color = "#fff";
             } else if (lastScrollTop <= 600){
                 nav.style.background = "transparent";
             }
@@ -74,3 +75,20 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+//! animation
+function reveal(){
+    var reveals = document.querySelectorAll(".reveal");
+    for(var i = 0; i , reveals.length; i++){
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if(elementTop < windowHeight - elementVisible){
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+window.addEventListener('scroll', reveal);
+reveal();

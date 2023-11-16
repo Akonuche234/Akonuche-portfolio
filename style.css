@@ -626,7 +626,6 @@ footer #footerCopyright p {
         transition: transform 0.2s;
         z-index: 99;
         padding: 4rem 1rem;
-        /* display: none; */
     }
     
     nav .navEle>ul {
@@ -778,4 +777,15 @@ footer #footerCopyright p {
 .showNav {
     transform: translateY(0) !important;
     background: #000 !important;
+}
+
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
