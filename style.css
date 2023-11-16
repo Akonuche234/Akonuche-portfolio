@@ -1,0 +1,781 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-bg-color: red;
+    --white: #fff;
+    --header-font: 'Roboto Slab', serif;
+    --para-font: 'Josefin Slab', serif;
+}
+
+img {
+    z-index: -10 !important;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+#myBtn:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+}
+
+/* zoom on hover an img */
+.zoomIMG {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.zoomIMG img {
+    transition: transform .5s ease;
+}
+
+.zoomIMG:hover img {
+    transform: scale(1.5);
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    position: absolute;
+}
+
+nav .navHeader {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 0.6rem;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .navHeader p{
+    font-family: var(--para-font);
+}
+
+nav .navHeader>.floatRight>p>span {
+    margin: 0 0.5rem;
+}
+
+nav .navEle {
+    width: 100%;
+    display: flex;
+    padding: 2rem 1rem;
+    align-items: center;
+    background: transparent;
+    /* filter: brightness(50%); */
+    filter: blur(0.8);
+    color: var(--white);
+    transition: all 1s ease-in-out;
+}
+
+nav .navEle>ul {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    position: relative;
+    float: left;
+}
+
+nav .navEle>ul a {
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+nav .navEle>ul li {
+    list-style-type: none;
+    font-style: var(--para-font);
+}
+
+nav .navEle>ul .menuItems {
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+nav .navEle>ul .menuItems:hover {
+    text-decoration: underline;
+}
+
+nav .navEle>.rightShift {
+    position: relative;
+    float: right;
+}
+
+nav .navEle>.rightShift button {
+    padding: 12px 22px;
+    border: none;
+    background: var(--main-bg-color);
+    color: var(--white);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+nav .navEle>.rightShift button:hover {
+    background: transparent;
+    border: 2px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    padding: 10px 22px;
+}
+
+/* Front Page */
+#HomePage {
+    width: 100%;
+    height: 95%;
+    background: url(./bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#HomePage>#homePageHeader {
+    padding: 5rem 2rem 40rem;
+    color: var(--white);
+}
+
+#HomePage>#homePageHeader>.leftComponent {
+    position: relative;
+    float: left;
+    width: 60%;
+    padding: 5rem 2rem;
+    letter-spacing: 2px;
+}
+
+#HomePage>#homePageHeader>.leftComponent>h1 {
+    font-size: 4.2rem;
+    padding: 1.5rem 0;
+    font-family: var(--header-font);
+}
+
+#HomePage>#homePageHeader>.leftComponent p{
+    font-family: var(--para-font);
+    line-height: 2;
+}
+
+#HomePage>#homePageHeader>.leftComponent>p:nth-child(1) {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* About Me */
+#Aboutme {
+    width: 100%;
+}
+
+#Aboutme>.aboutMeSection {
+    margin: 4rem;
+    padding: 1rem 5rem 3rem 5rem;
+}
+
+#Aboutme>.aboutMeSection:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Aboutme>.aboutMeSection>.agendaSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 2.5rem;
+}
+
+#Aboutme>.aboutMeSection:nth-child(2) {
+    flex-direction: row;
+}
+
+#Aboutme>.aboutMeSection img {
+    width: 40vmax;
+    position: relative;
+}
+
+#Aboutme>.aboutMeSection .imageBorder {
+    position: relative;
+}
+
+#Aboutme>.aboutMeSection .imageBorder:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    /* border: 3px solid var(--main-bg-color); */
+    border: 3px solid black;
+    pointer-events: none;
+    z-index: -12;
+}
+
+#Aboutme>.aboutMeSection h1 {
+    margin: 0 0 4rem 0;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--header-font);
+}
+
+#Aboutme>.aboutMeSection p {
+    letter-spacing: 3px;
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-align: justify;
+    font-family: var(--para-font);
+}
+
+#Aboutme>.aboutMeSection:nth-child(2) {
+    margin-top: 8%;
+}
+
+/* Service */
+#service {
+    width: 100%;
+}
+
+#service .servicesSection {
+    margin: 3rem 8rem;
+    padding: 2rem 2rem;
+}
+
+#service .servicesSection h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--header-font);
+}
+
+#service .servicesSection .sectionComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#service .servicesSection .sectionComponent .sectionElements {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#service .servicesSection .sectionComponent .sectionElements:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleText {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleText h2 {
+    font-weight: 200;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin: 1rem 0 2rem 0;
+    font-family: var(--header-font);
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleText p {
+    letter-spacing: 2px;
+    line-height: 2;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: var(--para-font);
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleText .sectionCaption {
+    font-weight: 100;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleImg {
+    border: 2px solid red;
+    box-shadow: 8px -8px 1px 0px var(--main-bg-color);
+    -webkit-box-shadow: 8px -8px 1px 0px var(--main-bg-color);
+    -moz-box-shadow: 8px -8px 1px 0px var(--main-bg-color);
+
+}
+
+#service .servicesSection .sectionComponent .sectionElements .sectionEleImg img {
+    width: 25vmax;
+    position: relative;
+    filter: grayscale(1);
+    margin: 1rem 2rem;
+}
+
+/* Connect me on */
+
+#connect {
+    width: 100%;
+}
+
+#connect>h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0 20vw;
+    display: none;
+    font-family: var(--header-font);
+}
+
+#connect .connectBG {
+    position: relative;
+    height: 40vmax;
+}
+
+#connect .connectBG iframe {
+    filter: brightness(70%) grayscale(30%);
+    width: 100%;
+    height: 100%;
+}
+
+#connect .connectBG .connectForm {
+    position: absolute;
+    top: -1vh;
+    right: 2vw;
+    width: 35%;
+}
+
+#connect .connectBG .connectForm #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.3rem 0;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+#connect .connectBG .connectForm #form h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #555;
+    position: relative;
+    left: -7vw;
+    margin: 0 0 4vh 0;
+    font-family: var(--header-font);
+}
+
+#connect .connectBG .connectForm #form .formEle {
+    padding: 1.5rem 0;
+    width: 21vw;
+    position: relative;
+    left: -3vw;
+}
+
+#connect .connectBG .connectForm #form .formEle label {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: var(--para-font);
+}
+
+#connect .connectBG .connectForm #form .formEle label span {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #555;
+}
+
+#connect .connectBG .connectForm #form .formEle label input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 120%;
+    padding: 8px 12px;
+    margin: 3px 1px;
+}
+
+#connect .connectBG .connectForm #form button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 22px;
+    position: relative;
+    right: -10.3vw;
+    margin-bottom: 3vh;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--header-font);
+}
+
+#connect .connectBG .connectForm #form button:hover {
+    background-color: transparent;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+}
+
+footer #footerId {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer #footerId .footerEle {
+    padding: 2rem 0rem;
+    margin: 2rem;
+}
+
+footer #footerId .footerEle h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--header-font);
+}
+
+footer #footerId .footerEle p {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.35rem;
+    cursor: pointer;
+    font-family: var(--para-font);
+}
+
+footer #footerId .footerEle p:hover{
+    letter-spacing: 3px;
+}
+
+footer #footerId .footerEle p a {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+footer #footerId .footerEle p i {
+    margin-right: 5px;
+}
+
+footer #footerId .footerEle .footerIcons i {
+    color: #fff;
+    font-size: 2.3em;
+    margin: 1rem 0 0 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+footer #footerId .footerEle .footerIcons i:hover{
+    padding: 0 5px;
+}
+
+footer #footerId .footerEle .footerIcons i:hover:nth-child(1) {
+    color: #c43023;
+}
+
+footer #footerId .footerEle .footerIcons i:hover:nth-child(2) {
+    color: #3f729b;
+}
+
+footer #footerId .footerEle .footerIcons i:hover:nth-child(3) {
+    color: #C13584;
+}
+
+footer #footerId .footerEle .footerIcons i:hover:nth-child(4) {
+    color: #1DA1F2;
+}
+
+footer #footerCopyright {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #footerCopyright p {
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: var(--para-font);
+}
+
+/* responsivnes */
+
+@media screen and (max-width: 1030px) {
+    #connect .connectBG {
+        height: 60vmax;
+    }
+
+    #connect .connectBG .connectForm {
+        width: 42%;
+    }
+
+    footer #footerId .footerEle h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    nav .navEle>ul>li {
+        padding: 0 0.8rem;
+        font-size: 1rem;
+    }
+
+    #HomePage {
+        height: 100%;
+    }
+
+    #HomePage>#homePageHeader>.leftComponent>p:nth-child(1) {
+        font-size: 1.2rem;
+    }
+
+    #HomePage>#homePageHeader>.leftComponent>h1 {
+        font-size: 3rem;
+    }
+
+    #Aboutme>.aboutMeSection {
+        margin: 4rem 0;
+        padding: 1rem 3.5rem 3rem 3.5rem;
+    }
+
+    #service .servicesSection {
+        margin: 3rem 0;
+    }
+
+    #service .servicesSection h1 {
+        font-size: 3rem;
+    }
+
+    #service .servicesSection .sectionComponent .sectionElements .sectionEleText h2 {
+        font-size: 2.5rem;
+    }
+
+    #service .servicesSection .sectionComponent .sectionElements .sectionEleText p {
+        font-size: 1rem;
+    }
+
+    #service .servicesSection .sectionComponent .sectionElements .sectionEleText .sectionCaption {
+        font-size: 0.75rem;
+    }
+
+    #connect .connectBG .connectForm #form .formEle {
+        padding: 1.2rem 0;
+    }
+
+    #connect .connectBG .connectForm #form {
+        padding: 0.5rem 0;
+    }
+
+    #connect .connectBG .connectForm #form button {
+        right: -8.3vw;
+    }
+
+    footer #footerId .footerEle h2 {
+        font-size: 1.2rem;
+    }
+
+    footer #footerId .footerEle .footerIcons i {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav {
+        position: fixed;
+        z-index: 80;
+    }
+    
+    nav .navEle {
+        transform: translateY(-150%);
+        transition: transform 0.2s;
+        z-index: 99;
+        padding: 4rem 1rem;
+        /* display: none; */
+    }
+    
+    nav .navEle>ul {
+        display: block;
+    }
+
+    nav .navEle>ul>li {
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
+    }
+
+    nav .navEle>.rightShift {
+        bottom: -33vh;
+        width: 70%;
+    }
+
+    nav .navEle>.rightShift>button {
+        font-size: 1rem;
+        font-weight: 700;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    #HomePage>#homePageHeader>.leftComponent {
+        width: 100%;
+    }
+
+    .hamburger {
+        visibility: visible !important;
+    }
+
+    #HomePage>#homePageHeader {
+        padding-bottom: 35rem;
+    }
+
+    #Aboutme>.aboutMeSection .imageBorder {
+        display: none;
+    }
+
+    #Aboutme>.aboutMeSection h1 {
+        font-size: 3rem;
+    }
+
+    #Aboutme>.aboutMeSection p {
+        text-align: center;
+    }
+
+    #service .servicesSection .sectionComponent .sectionElements .sectionEleImg {
+        display: none;
+    }
+
+    #service .servicesSection {
+        padding: 0%;
+        margin: 3rem 0.5rem;
+    }
+
+    #service .servicesSection .sectionComponent .sectionElements {
+        margin: 0;
+        padding: 0;
+    }
+
+    #service .servicesSection h1 span {
+        display: none;
+    }
+
+    #connect .connectBG iframe {
+        display: none;
+    }
+
+    #connect .connectBG {
+        height: 97vmax;
+    }
+
+    #connect .connectBG .connectForm {
+        width: 97%;
+    }
+
+    #connect .connectBG .connectForm {
+        top: 4vh;
+    }
+
+    #connect .connectBG .connectForm #form .formEle {
+        width: 65%;
+    }
+
+    #connect>h1 {
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    #connect .connectBG .connectForm #form {
+        z-index: -10;
+    }
+
+    footer #footerId {
+        flex-direction: column;
+        z-index: -10;
+    }
+
+    footer #footerId .footerEle .meHere {
+        margin-left: 14px;
+    }
+
+    footer #footerId .footerEle {
+        margin: 0%;
+    }
+
+    footer #footerCopyright p{
+        font-size: 0.7rem;
+    }
+
+    #myBtn {
+        bottom: 12px;
+        right: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #HomePage>#homePageHeader>.leftComponent>h1 {
+        font-size: 2.1rem;
+    }
+
+    #HomePage>#homePageHeader>.leftComponent {
+        padding: 2rem 1rem;
+    }
+
+    #Aboutme>.aboutMeSection {
+        padding: 1rem;
+    }
+}
+
+
+
+/* hamburger */
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 3rem;
+    right: 1rem;
+    border: none;
+    padding: 4px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.showNav {
+    transform: translateY(0) !important;
+    background: #000 !important;
+}
