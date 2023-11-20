@@ -321,7 +321,6 @@ nav .navEle>.rightShift button:hover {
 }
 
 #service .servicesSection .sectionComponent .sectionElements .sectionEleImg {
-    border: 2px solid red;
     box-shadow: 8px -8px 1px 0px var(--main-bg-color);
     -webkit-box-shadow: 8px -8px 1px 0px var(--main-bg-color);
     -moz-box-shadow: 8px -8px 1px 0px var(--main-bg-color);
