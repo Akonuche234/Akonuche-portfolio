@@ -491,7 +491,7 @@ footer #footerId .footerEle p i {
     margin-right: 5px;
 }
 
-footer #footerId .footerEle .footerIcons i {
+footer #footerId .footerEle .footerIcons a {
     color: #fff;
     font-size: 2.3em;
     margin: 1rem 0 0 1rem;
@@ -499,23 +499,23 @@ footer #footerId .footerEle .footerIcons i {
     transition: all 0.25s ease-in-out;
 }
 
-footer #footerId .footerEle .footerIcons i:hover{
+footer #footerId .footerEle .footerIcons a:hover{
     padding: 0 5px;
 }
 
-footer #footerId .footerEle .footerIcons i:hover:nth-child(1) {
+footer #footerId .footerEle .footerIcons a:hover:nth-child(1) {
     color: #c43023;
 }
 
-footer #footerId .footerEle .footerIcons i:hover:nth-child(2) {
+footer #footerId .footerEle .footerIcons a:hover:nth-child(2) {
     color: #3f729b;
 }
 
-footer #footerId .footerEle .footerIcons i:hover:nth-child(3) {
+footer #footerId .footerEle .footerIcons a:hover:nth-child(3) {
     color: #C13584;
 }
 
-footer #footerId .footerEle .footerIcons i:hover:nth-child(4) {
+footer #footerId .footerEle .footerIcons a:hover:nth-child(4) {
     color: #1DA1F2;
 }
 
