@@ -782,7 +782,7 @@ footer #footerCopyright p {
 .reveal{
     transform: translateY(150px);
     opacity: 0;
-    transition: all 2s linear;
+    transition: all 1s linear;
 }
 
 .reveal.active{
